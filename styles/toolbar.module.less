@@ -1,0 +1,134 @@
+@import "theme/_rwd.less";
+@import "theme/_vars.less";
+@import "theme/_mixins.less";
+/*top list*/
+#toolbar {
+  height: 128px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  z-index: 9;
+  transition: 0.3s all ease;
+
+  &.scrolled {
+    background-color: #ffffff;
+    height: 65px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.08);
+    .dark-theme({
+      background-color: #000000;
+    })
+  }
+  &.dark:not(.active) {
+    ul.links {
+      a {
+        color: white !important;
+      }
+    }
+  }
+
+  nav {
+    width: 90vw;
+    margin: auto;
+    // background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    ul {
+      margin: 0;
+    }
+    .md-screens({
+      width: 90vw;
+    });
+    .xl-screens({
+      width: 75vw;
+    });
+  }
+
+  nav a.brand {
+    color: @primary-color;
+    display: flex;
+    align-items: center;
+    font-size: 1.0rem;
+    img {
+      height: 30px;
+      width: auto;
+      margin-right: 7.5px;
+    }
+  }
+
+  nav ul.links {
+    display: none;
+    li {
+      display: inline-block;
+      a {
+        display: block;
+        padding: 7px 15px;
+        position: relative;
+        &:hover {
+          color: @primary-color;
+        }
+        &.active {
+          color: @primary-color;
+          font-weight: bold;
+          border-radius: 50px;
+          background-color: lighten(@primary-color, 60%)
+        }
+
+        .dark-theme({
+          color: white;
+        })
+      }
+    }
+    .md-screens({
+      display: block;
+    })
+  }
+
+  nav ul.auth {
+    display: flex;
+    align-items: center;
+    li {
+      padding: 0 10px;
+      cursor: pointer;
+      img {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+ul.drawer-links {
+  li {
+    a {
+      display: block;
+      padding: 15px 0;
+    }
+  }
+}
+// drop down
+.auth-dropdown {
+  width: 280px;
+  min-height: 350px;
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {
+      height: 65px;
+      width: 65px;
+      border-radius: 50%;
+    }
+  }
+  ul.links {
+    padding: 0 0.75rem;
+    li {
+      font-size: 16px;
+      padding: 10px 0;
+    }
+  }
+}

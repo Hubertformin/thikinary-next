@@ -1,0 +1,63 @@
+@import "theme/_vars";
+@import "theme/_rwd";
+
+#library-home {
+  .store-banner {
+    min-height: 100px;
+    border-bottom: 1px solid #dddddd;
+    margin-bottom: 25px;
+    .text {
+      font-size: 16px;
+    }
+  }
+
+  .books-section {
+    .book-grid {
+      display: grid;
+      grid-template-columns: auto;
+      grid-gap: 15px;
+      .md-screens({
+        grid-template-columns: 250px 250px 250px;
+        grid-gap: 15px 25px;
+      })
+    }
+
+    .book-item {
+      cursor: pointer;
+      .image-section {
+        background-color: #f7f7f7;
+        width: 100%;
+        text-align: center;
+        padding: 1.275rem 0;
+        height: auto;
+        img {
+          height: 180px;
+          display: inline;
+        }
+      }
+      .meta {
+        padding: 0.75rem;
+        .title {
+          font-weight: 500;
+          font-size: 17px;
+          margin-bottom: 10px;
+          width: 100%;
+          white-space: nowrap;
+          overflow-x: hidden;
+          text-overflow: ellipsis;
+
+        }
+        .author {
+          font-size: 15px;
+          color: #9999;
+        }
+        .price {
+          color: @primary-color;
+        }
+      }
+    }
+
+  }
+
+
+}

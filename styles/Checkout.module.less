@@ -1,0 +1,36 @@
+@import "theme/_rwd";
+@import "theme/_vars";
+
+.checkout-view {
+  .md-screens({
+    display: grid;
+    grid-template-columns: 50% 50%;
+  });
+  .cart {
+    display: flex;
+    img {
+      height: 75px;
+    }
+    .item {
+      display: flex;
+      .desc {
+        .title {
+          font-weight: bold;
+          font-size: 16px;
+        }
+        .author {
+          color: #999999;
+        }
+        .price {
+          color: @primary-color;
+        }
+      }
+    }
+  }
+  .pay-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+

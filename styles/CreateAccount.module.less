@@ -1,0 +1,78 @@
+@import "theme/_rwd";
+
+#signup-body {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background-image: url("https://ik.imagekit.io/thinkinary/edouard-tamba-7KT6QbFypSI-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  div.overlay {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  .overlay-text {
+    display: none;
+    .md-screens({
+      display: block;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 450px;
+      left: 65px;
+      padding: 0;
+    });
+    .title {
+      font-size: 25px;
+      font-weight: bold;
+      margin-bottom: 1.2rem;
+      color: white;
+      .md-screens({
+        font-size: 40px;
+      });
+    }
+    .text {
+      font-size: 16px;
+      color: white;
+    }
+  }
+
+  .form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+    height: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    .md-screens({
+      border-radius: 15px;
+      top: 50%;
+      left: unset;
+      transform: translateY(-50%);
+      right: 75px;
+      width: 450px;
+      height: 95vh;
+    });
+
+  }
+
+  nav {
+    padding: 2rem 2.5rem;
+  }
+
+  .social {
+    border-radius: 50%;
+    margin-right: 15px;
+    img {
+      height: 35px;
+      border-radius: 50%;
+    }
+  }
+
+}

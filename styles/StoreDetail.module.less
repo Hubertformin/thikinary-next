@@ -1,0 +1,75 @@
+@import "theme/_rwd";
+
+#store-detail {
+
+  .book-row {
+    display: grid;
+    grid-template-columns: 100%;
+    .md-screens({
+      height: 70vh;
+      grid-template-columns: 50% 50%;
+      grid-column-gap: 20px;
+    })
+  }
+
+  .image-section {
+    background: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.25rem 0;
+
+    img {
+      height: 300px;
+    }
+  }
+
+  .detail {
+    .author {
+      color: #9999;
+    }
+    .price {
+      font-size: 23px;
+      margin-bottom: 0.758rem;
+    }
+    .description {
+      font-size: 14px;
+      text-align: justify;
+    }
+  }
+
+  .book-detail {
+    background-color: #f7f7f7;
+    .md-screens({
+      display: grid;
+      grid-column-gap: 20px;
+      grid-template-columns: 25% 25% 25% 25%;
+    });
+    .title {
+      font-weight: bold;
+    }
+  }
+
+  .author-detail {
+    .image-container {
+      display: flex;
+      justify-content: center;
+    }
+    img {
+      height: 90px;
+      width: 90px;
+      border-radius: 50%;
+      .md-screens({
+        height: 150px;
+        width: 150px;
+      })
+    }
+    .md-screens({
+      display: grid;
+      grid-template-columns: 200px 450px;
+    });
+    .details {
+      text-align: justify;
+    }
+  }
+}
